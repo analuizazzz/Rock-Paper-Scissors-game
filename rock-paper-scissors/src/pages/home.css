@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.home {
+    background: linear-gradient(45deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    width: 100vw;
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+}
+
+.score-view {
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 55vw;
+    height: 20vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 50px;
+    padding: 15px;
+}
+
+.logo-img {
+    width: 180px;
+}
+
+.score {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    color: hsl(229, 64%, 46%);
+    font-size: 30px;
+    border: 2px solid white;
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.points {
+    padding: 10px;
+    font-size: 40px;
+}
+
+/* Área do jogo */
+.game {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; /* Ajuste para espaçamento */
+}
+
+.triangle {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    z-index: 1;
+}
+
+/* Estilização dos botões de escolha */
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(99, 99, 99, 0.2);
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+.rules {
+    margin-left: 1200px;
+}
+
+.rules-button {
+    background: linear-gradient(45deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border:none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+}
+
+.rules-button:hover{
+    transform: scale(1.1);
+}
+
+/* Posicionamento das escolhas */
+.paper {
+    top: -40px;
+    left: -50px;
+    border: 10px solid hsl(230, 89%, 62%);
+}
+
+.scissors {
+    top: -40px;
+    right: -50px;
+    border: 10px solid hsl(39, 89%, 49%);
+}
+
+.rock {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid hsl(349, 71%, 52%);
+}
+
+/* Tela de Resultado */
+.results {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    text-align: center;
+    width: 100%;
+    max-width: 500px; 
+    margin: auto;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    color: white;
+    margin-top: 20px;
+}
+
+.user-choice-container{
+    margin-right: 100px;
+}
+.result-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.choice-circle-paper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    border: 10px solid hsl(230, 89%, 62%);
+}
+
+.choice-circle-rock {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    border: 10px solid hsl(349, 71%, 52%);
+}
+
+.choice-circle-scissors {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    border: 10px solid hsl(39, 89%, 49%);
+}
+
+
+
+.choice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.result-text h2 {
+    font-size: 36px;
+    color: white;
+}
+
+.result-text button {
+    background: white;
+    color: hsl(229, 64%, 46%);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.result-text button:hover {
+    background: hsl(229, 64%, 46%);
+    color: white;
+}
+
